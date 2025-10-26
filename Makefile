@@ -941,6 +941,7 @@ KBUILD_CFLAGS	+= $(CC_FLAGS_SCS)
 export CC_FLAGS_SCS
 endif
 
+ifeq ($(cc-name),clang)
 ifdef CONFIG_LTO_CLANG
 ifdef CONFIG_LTO_CLANG_THIN
 CC_FLAGS_LTO	+= -flto=thin -fsplit-lto-unit -funified-lto
@@ -964,6 +965,7 @@ endif
 ifdef CONFIG_LTO
 KBUILD_CFLAGS	+= $(CC_FLAGS_LTO)
 export CC_FLAGS_LTO
+endif
 endif
 
 # arch Makefile may override CC so keep this after arch Makefile is included
