@@ -134,3 +134,18 @@ all.config
 
 # fetched Android config fragments
 kernel/configs/android-*.cfg
+
+# out folder
+/out/
+
+# clang folder
+/clang/
+
+# build script
+build.sh
+
+# build log
+build.log
+
+# token for a Telegram bot for uploading builds
+token.sh
